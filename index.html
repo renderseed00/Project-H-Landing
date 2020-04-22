@@ -1,0 +1,832 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project H - by Renderseed Labs and Motion Studios</title>
+    <meta name="description" content="DEMO" />
+    <meta name="keywords" content="DEMO" />
+    <meta name="author" content="Arnold Takundwa" />
+    <link rel="shortcut icon" href="favicon(4).ico">
+    <link rel="stylesheet" type="text/css" href="css/app.css">
+    <link rel="stylesheet" type="text/css" href="css/nav-style.css">
+    <link rel="stylesheet" type="text/css" href="css/foundation.min.css">
+
+
+
+    <style>
+      
+      body {
+        font-family: candara, sans-serif;
+      }
+      h1 {
+        font-family: candara, sans-serif;
+      }
+      a:hover {
+        color: #cea17f;
+      }
+      *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+      }
+      img{
+        max-width:100%;
+      }
+      h2{
+        font-size:2.5em;
+      }
+      .container{
+        width:90%;
+        margin:auto;
+      }
+      .button {
+        background: #cea17f;
+      }
+      header{
+        color:#fff;
+        position:absolute;
+        display:flex;
+        flex-flow: row wrap;
+        width:100%;
+        top:0;
+        left:0;
+        z-index:9;
+      }
+      header .container{
+        display:flex;
+        flex-flow: row wrap;
+        align-items:center;
+        padding:15px 0;
+      }
+      .logo{
+        font-size:20px;
+        text-transform:uppercase;
+        font-weight:bold;
+      }
+      .logo a{
+        color:#fff;
+        text-decoration:none;
+      }
+      nav {
+          justify-content: flex-end;
+          display: flex;
+          flex: 2 auto;
+      }
+      nav ul{
+        list-style:none;
+        padding:0;
+        margin:0;
+        display:flex;
+        flex-direction: row;
+      }
+      nav ul li{
+        padding:0.5em;
+      }
+      nav ul li a{
+        color:#fff;
+        text-decoration:none;
+        display:inline-block;
+      }
+
+      .home{
+      background:url('img/grid_o2.jpg');
+      background-position: center center;
+      background-size: cover;
+      background-repeat: repeat-x;
+        height:100vh;
+        display:flex;
+        align-items:center;
+        text-align:center;
+        position:relative;
+        z-index:0;
+        border-style: solid;
+        border-color: black;
+      }
+      .home:after{
+        display:block;
+        background:rgba(0,0,0,0);
+        left:0;
+        top:0;
+        height:100%;
+        width:100%;
+        position:absolute;
+      }
+      .concept{
+      background:url('img/concept_bg3.jpg');
+      background-position: center center;
+      background-size: cover;
+      background-repeat: repeat-x;
+        height:100vh;
+        align-items:center;
+        text-align:center;
+        position:relative;
+        z-index:0;
+        border-style: solid;
+        border-color: black;
+      }
+      .concept:after{
+        display:block;
+        background:rgba(0,0,0,0);
+        left:0;
+        top:0;
+        height:100%;
+        width:100%;
+        position:absolute;
+      }
+      .story{
+      background:url('img/story_bg3.jpg');
+      background-position: center center;
+      background-size: cover;
+      background-repeat: repeat-x;
+        height:100vh;
+        display:flex;
+        align-items:center;
+        text-align:center;
+        position:relative;
+        z-index:0;
+      }
+      .story:after{
+        display:block;
+        background:rgba(0,0,0,0);
+        left:0;
+        top:0;
+        height:100%;
+        width:100%;
+        position:absolute;
+      }
+      .vehicles{
+      background:url('img/vehicles_bg2.jpg');
+      background-position: center center;
+      background-size: cover;
+      background-repeat: repeat-x;
+        height:100vh;
+        display:flex;
+        align-items:center;
+        text-align:center;
+        position:relative;
+        z-index:0;
+      }
+      .vehicles:after{
+        display:block;
+        background:rgba(0,0,0,0);
+        left:0;
+        top:0;
+        height:100%;
+        width:100%;
+        position:absolute;
+      }
+      .characters{
+      background:url('img/characters_bg2.jpg');
+      background-position: center center;
+      background-size: cover;
+      background-repeat: repeat-x;
+        height:100vh;
+        display:flex;
+        align-items:center;
+        text-align:center;
+        position:relative;
+        z-index:0;
+      }
+      .characters:after{
+        display:block;
+        background:rgba(0,0,0,0);
+        left:0;
+        top:0;
+        height:100%;
+        width:100%;
+        position:absolute;
+      }
+      .about{
+      background:url('img/about_bg.jpg');
+      background-position: center center;
+      background-size: cover;
+      background-repeat: repeat-x;
+        height:100vh;
+        display:flex;
+        align-items:center;
+        text-align:center;
+        position:relative;
+        z-index:0;
+      }
+      .about:after{
+        display:block;
+        background:rgba(0,0,0,0);
+        left:0;
+        top:0;
+        height:100%;
+        width:100%;
+        position:absolute;
+      }
+      .home h2{
+        color:#000000;
+        position:relative;
+        z-index:1;
+        text-align:center;
+        line-height:2;
+      }
+      .concept{
+        color:#000000;
+        position:relative;
+        z-index:1;
+        text-align:center;
+        line-height:2;
+      }
+      .story{
+        color:#000000;
+        position:relative;
+        z-index:1;
+        text-align:center;
+        line-height:2;
+      }
+      .vehicles{
+        color:#000000;
+        position:relative;
+        z-index:1;
+        text-align:center;
+        line-height:2;
+      }
+      .characters{
+        color:#000000;
+        position:relative;
+        z-index:1;
+        text-align:center;
+        line-height:2;
+      }
+      .about{
+        color:#000000;
+        position:relative;
+        z-index:1;
+        text-align:center;
+        line-height:2;
+      }
+
+      header.fixed {
+        background: #fff;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        opacity:0;
+        visibility:hidden;
+        box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.2);
+        transform:translate(0, -200px);
+      }
+      header.fixed nav a, header.fixed .logo a{
+        color:#333;
+      }
+      header.in-view{
+        opacity:1;
+        visibility:visible;
+        transition: all 0.3s ease;
+        transform:translate(0, 0);
+      }
+      @media only screen and (max-width: 640px) {
+        header.fixed{
+          position:relative;
+        }
+      }
+      header{
+        background: #000000;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 999px;
+        box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.5);
+      }
+
+
+
+      /* Media Queries */
+      /* Small devices (landscape phones, 544px and up) */
+        @media (min-width: 200px) {  
+          #beta-max {
+            width: 800px;
+          }
+          #gamma-max {
+            width: 500px;
+          }
+          .watch-button {
+            border-bottom: 0px solid #000000;
+            border-left: 0px solid transparent;
+            border-right: 0px solid transparent;
+            height: 0;
+            width: 0px;
+            padding-top: 925px;
+          }
+          .watch-button h1 {
+            color: #ffffff;
+            padding-top: 10px;
+          }
+          .concept-button {
+            border-bottom: 0px solid #000000;
+            border-left: 0px solid transparent;
+            border-right: 0px solid transparent;
+            height: 0;
+            width: 0px;
+            padding-top: 925px;
+          }
+          .concept-button h1 {
+            color: #ffffff;
+            padding-top: 10px;
+          }
+          .card-section p {
+            font-size: 12px;
+          }
+          #concept-heading {
+            font-size: 40px;
+            line-height: 40px;
+          }
+        }
+
+
+        @media (min-width: 544px) {  
+          #beta-max {
+            width: 100%;
+          }
+          #gamma-max {
+            width: 100%;
+          }
+          .watch-button {
+            border-bottom: 110px solid #000000;
+            border-left: 70px solid transparent;
+            border-right: 0px solid transparent;
+            height: 0;
+            width: 300px;
+            padding-top: 925px;
+          }
+          .watch-button h1 {
+            color: #ffffff;
+            padding-top: 10px;
+          }
+          .concept-button {
+            border-bottom: 110px solid #000000;
+            border-left: 70px solid transparent;
+            border-right: 0px solid transparent;
+            height: 0;
+            width: 300px;
+            padding-top: 925px;
+          }
+          .concept-button h1 {
+            color: #ffffff;
+            padding-top: 10px;
+          }
+          .card-section p {
+            font-size: 18px;
+          }
+          #concept-heading {
+            font-size: 40px;
+            line-height: 40px;
+          }
+        }
+
+
+
+/* sticky social*/
+
+      .sticky-social-bar {
+        padding: 0;
+        margin: 0;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+                transform: translateY(-50%);
+        width: 11.25rem;
+        background-color: #333333;
+        position: fixed;
+        right: -8.75rem;
+      }
+
+      .sticky-social-bar .social-icon {
+        list-style-type: none;
+        color: #fefefe;
+        background-color: inherit;
+        margin: 0;
+        transition: all 0.3s ease-in-out;
+        cursor: pointer;
+        font-size: 1.1rem;
+        padding: 0.25rem 0.25rem 0.5rem;
+      }
+
+      .sticky-social-bar .social-icon:first-of-type {
+        padding-top: 0.375rem;
+      }
+
+      .sticky-social-bar .social-icon:last-of-type {
+        padding-bottom: 0.625rem;
+      }
+
+      .sticky-social-bar .social-icon > a {
+        color: inherit;
+        background-color: inherit;
+      }
+
+      .sticky-social-bar .social-icon > a > .fa {
+        padding: 0.5rem;
+        width: 2rem;
+        height: 2rem;
+        float: left;
+        margin-right: 0.5rem;
+      }
+
+      .sticky-social-bar .social-icon > a > .fa.fa-facebook {
+        background-color: #3b5998;
+      }
+
+      .sticky-social-bar .social-icon > a > .fa.fa-twitter {
+        background-color: #55acee;
+      }
+
+      .sticky-social-bar .social-icon > a > .fa.fa-linkedin {
+        background-color: #007bb5;
+      }
+
+      .sticky-social-bar .social-icon > a > .fa.fa-youtube {
+        background-color: #bb0000;
+      }
+
+      .sticky-social-bar .social-icon > a > .fa.fa-instagram {
+        background-color: #125688;
+      }
+
+      .sticky-social-bar .social-icon > a > .fa.fa-pinterest-p {
+        background-color: #cb2027;
+      }
+
+      .sticky-social-bar .social-icon > a > .social-icon-text {
+        font-size: 80%;
+        color: #fefefe;
+        text-transform: uppercase;
+        margin-right: 0.5rem;
+      }
+
+      .sticky-social-bar .social-icon:hover {
+        -webkit-transform: translateX(-8.75rem);
+            -ms-transform: translateX(-8.75rem);
+                transform: translateX(-8.75rem);
+      }
+
+      .sticky-social-bar .social-icon:hover > a {
+        color: inherit;
+        background-color: inherit;
+      }
+
+
+
+/* sticky social 2*/
+
+      .sticky-social-bar2 {
+        padding: 0;
+        margin: 0;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+                transform: translateY(-50%);
+        width: 11.25rem;
+        background-color: #333333;
+        position: fixed;
+        left: -8.75rem;
+      }
+
+      .sticky-social-bar2 .social-icon {
+        list-style-type: none;
+        color: #fefefe;
+        background-color: inherit;
+        margin: 0;
+        transition: all 0.3s ease-in-out;
+        cursor: pointer;
+        font-size: 1.1rem;
+        padding: 0.25rem 0.25rem 0.5rem;
+      }
+
+      .sticky-social-bar2 .social-icon:first-of-type {
+        padding-top: 0.375rem;
+      }
+
+      .sticky-social-bar2 .social-icon:last-of-type {
+        padding-bottom: 0.625rem;
+      }
+
+      .sticky-social-bar2 .social-icon > a {
+        color: inherit;
+        background-color: inherit;
+      }
+
+      .sticky-social-bar2 .social-icon > a > .fa {
+        padding: 0.5rem;
+        width: 2rem;
+        height: 2rem;
+        float: right;
+        margin-right: 0rem;
+      }
+
+      .sticky-social-bar2 .social-icon > a > .fa.fa-facebook {
+        background-color: #3b5998;
+      }
+
+      .sticky-social-bar2 .social-icon > a > .fa.fa-twitter {
+        background-color: #55acee;
+      }
+
+      .sticky-social-bar2 .social-icon > a > .fa.fa-linkedin {
+        background-color: #007bb5;
+      }
+
+      .sticky-social-bar2 .social-icon > a > .fa.fa-youtube {
+        background-color: #bb0000;
+      }
+
+      .sticky-social-bar2 .social-icon > a > .fa.fa-instagram {
+        background-color: #125688;
+      }
+
+      .sticky-social-bar2 .social-icon > a > .fa.fa-pinterest-p {
+        background-color: #cb2027;
+      }
+
+      .sticky-social-bar2 .social-icon > a > .social-icon-text {
+        font-size: 80%;
+        color: #fefefe;
+        text-transform: uppercase;
+        margin-right: 0.5rem;
+      }
+
+      .sticky-social-bar2 .social-icon:hover {
+        -webkit-transform: translateX(8.75rem);
+            -ms-transform: translateX(8.75rem);
+                transform: translateX(8.75rem);
+      }
+
+      .sticky-social-bar2 .social-icon:hover > a {
+        color: inherit;
+        background-color: inherit;
+      }
+
+
+
+    </style>
+<script type="text/javascript">
+  
+
+$(window).scroll(function() {
+  var header = $(document).scrollTop();
+  var headerHeight = $(".header").outerHeight();
+  var firstSection = $(".main-container section:nth-of-type(1)").outerHeight();
+  if (header > headerHeight) {
+    $(".header").addClass("fixed");
+  } else {
+    $(".header").removeClass("fixed");
+  }
+  if (header > firstSection) {
+    $(".header").addClass("in-view");
+  } else {
+    $(".header").removeClass("in-view");
+  }
+});
+
+
+</script>
+
+  </head>
+  <body>
+
+
+
+<header class="header">
+  <div class="container">
+    <span data-responsive-toggle="topbar-responsive" data-hide-for="medium">
+      <a class="topbar-responsive-logo" href="#"><img src="img/Logo_Letter.png" alt="Motion Labs" height="26"></a>
+      <button class="menu-icon" type="button" data-toggle></button>
+    </span>
+  </div>
+  <div id="topbar-responsive" class="topbar-responsive-links">
+    <nav>
+      <ul style="align-items: center;">
+        <a class="topbar-responsive-logo" href="#"><img src="img/Motion_Logo_Header_.png" alt="Motion Labs" height="26"></a>
+        <li><a href="#section0">HOME</a></li>
+        <li><a href="#section1">CONCEPT</a></li>
+        <li><a href="#section2">STORY</a></li>
+        <li><a href="#section3">VEHICLES</a></li>
+        <li><a href="#section4">CHARACTERS</a></li>
+        <li><a href="#section5">ABOUT</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<div class="main-container">
+  <section class="home" id="section0" data-anchor="op-section second" style="padding-top: 50px;">
+    <div class="grid-container">
+      <div class="grid-x">
+        <div class="cell small-auto medium-6 large-8 large-push-1">
+        <img id="beta-max" src="img/one2.png">
+        </div>
+        <div class="cell small-auto medium-6 large-4 large-push-1">
+        <img src="img/Home2.png" style="">
+        <h1 style="font-family: Eras ITC; font-weight: bolder;">THE STORY OF THE NEXUS GRAND PRIX</h1>
+        <a href="#section2" class="button large">STORY</a>
+        </div>
+      </div>
+    </div>
+    <div class="watch-button">
+      <a href="https://www.renderseedlabs.com" style="color: #ffffff; font-size: 40px; font-weight: bolder; font-family: candara, sans-serif;">< WATCH</a>
+    </div>
+  </section>
+
+
+  <section class="concept" id="section1" data-anchor="op-section second" style="padding-top: 125px;">
+
+  <div class="grid-container">
+    <div class="grid-x grid-padding-x small-up-1 medium-up-1 large-up-1">
+      <div class="cell">
+        <h1 style="font-family: Eras ITC; font-weight: bolder;" id="concept-heading" class="text-center">Welcome to the Nexus Grand Prix</h1>
+      </div>
+    </div>
+  </div>
+  <div class="grid-container">
+    <div class="grid-x grid-padding-x">
+        <div class="cell small-12 medium-6 large-6">
+          <img id="gamma-max" src="img/gamma_Crop.png">
+        </div>
+
+
+
+
+        <div class="cell small-6 medium-6 large-3">
+            <img id="concept-img" class="thumbnail" src="img/concept_2.jpeg" alt="NGP Starting Line" style="">
+            <div class="card-section">
+              <p style="text-align: center;">As an annual tradition for over 75 years, the Nexus Grand Prix is the true test of skill and will for “Hybrid Pilots” in the Nexus System. It is the final leg of an eight-round series, designed to crown the best H-Pilot.</p>
+            </div>
+        </div>
+
+
+        <div class="cell small-6 medium-6 large-3 medium-push-3 large-push-0">
+            <img id="concept-img" class="thumbnail" src="img/concept_3.jpeg" alt="NGP Starting Line 2" style="">
+            <div class="card-section">
+              <p style="text-align: center;">The Nexus Grand Prix was established as a competition between the two labor factions of the Nexus System; The Drone Collective and The Alliance Class. The winner is granted “Royal Credits,” which are evenly dispersed across the colonies of the winning faction.</p>
+            </div>
+        </div>
+    </div>
+  </div>
+
+  <div class="grid-container">
+    <div class="grid-x grid-padding-x small-up-1 medium-up-1 large-up-1">
+      <div class="cell">
+        <p style="font-family: Eras ITC;" class="text-center">"But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder
+        of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who
+        loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious</p>
+      </div>
+    </div>
+  </div>
+
+    <div class="concept-button">
+      <a href="https://www.renderseedlabs.com" style="color: #ffffff; font-size: 40px; font-weight: bolder; font-family: candara, sans-serif;">CONCEPT ></a>
+    </div>
+  </section>
+
+
+  <section class="story" id="section2" data-anchor="op-section third">
+    <div class="container">
+      <h2>Story</h2>
+      <p>"But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder
+        of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who
+        loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious
+        physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?" "At vero
+        eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia
+        animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda
+        est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis
+        voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat."</p>
+    </div>
+  </section>
+  <section class="vehicles" id="section3" data-anchor="op-section fourth">
+    <div class="container">
+      <h2>Vehicles</h2>
+      <p>"But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder
+        of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who
+        loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious
+        physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?" "At vero
+        eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia
+        animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda
+        est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis
+        voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat."</p>
+    </div>
+  </section>
+  <section class="characters" id="section4" data-anchor="op-section fifth">
+    <div class="container">
+      <h2>Characters</h2>
+      <p>"But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder
+        of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who
+        loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious
+        physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?" "At vero
+        eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia
+        animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda
+        est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis
+        voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat."</p>
+    </div>
+  </section>
+  <section class="about" id="section5" data-anchor="op-section last">
+    <div class="container">
+      <h2>About</h2>
+      <p>"But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder
+        of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who
+        loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious
+        physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?" "At vero
+        eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia
+        animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda
+        est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis
+        voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat."</p>
+    </div>
+    <ul class="sticky-social-bar">
+      <li class="social-icon">
+        <a href="#"> 
+          <i class="fa fa-facebook" aria-hidden="true"></i>
+          <span class="social-icon-text">Facebook</span>
+        </a>
+      </li>
+      <li class="social-icon">
+        <a href="#">
+          <i class="fa fa-twitter" aria-hidden="true"></i>
+          <span class="social-icon-text">Twitter</span>
+        </a>
+      </li>
+      <li class="social-icon">
+        <a href="#">
+          <i class="fa fa-linkedin" aria-hidden="true"></i>
+          <span class="social-icon-text">Linkedin</span>
+        </a>
+      </li>
+      <li class="social-icon">
+        <a href="#">
+          <i class="fa fa-youtube" aria-hidden="true"></i>
+          <span class="social-icon-text">Youtube</span>
+        </a>
+      </li>
+      <li class="social-icon">
+        <a href="#">
+          <i class="fa fa-instagram" aria-hidden="true"></i>
+          <span class="social-icon-text">Instagram</span>
+        </a>
+      </li>
+      <li class="social-icon">
+        <a href="#">
+          <i class="fa fa-pinterest-p" aria-hidden="true"></i>
+          <span class="social-icon-text">Pinterest</span>
+        </a>
+      </li> 
+    </ul>
+
+
+
+        <ul class="sticky-social-bar2">
+      <li class="social-icon">
+        <a href="#"> 
+          <i class="fa fa-facebook" aria-hidden="true"></i>
+          <span class="social-icon-text">Facebook</span>
+        </a>
+      </li>
+      <li class="social-icon">
+        <a href="#">
+          <i class="fa fa-twitter" aria-hidden="true"></i>
+          <span class="social-icon-text">Twitter</span>
+        </a>
+      </li>
+      <li class="social-icon">
+        <a href="#">
+          <i class="fa fa-linkedin" aria-hidden="true"></i>
+          <span class="social-icon-text">Linkedin</span>
+        </a>
+      </li>
+      <li class="social-icon">
+        <a href="#">
+          <i class="fa fa-youtube" aria-hidden="true"></i>
+          <span class="social-icon-text">Youtube</span>
+        </a>
+      </li>
+      <li class="social-icon">
+        <a href="#">
+          <i class="fa fa-instagram" aria-hidden="true"></i>
+          <span class="social-icon-text">Instagram</span>
+        </a>
+      </li>
+      <li class="social-icon">
+        <a href="#">
+          <i class="fa fa-pinterest-p" aria-hidden="true"></i>
+          <span class="social-icon-text">Pinterest</span>
+        </a>
+      </li> 
+    </ul>
+  </section>
+</div>
+
+
+
+
+
+
+    <script src="js/jquery.min.js"></script>
+    <script src="node_modules/what-input/dist/what-input.js"></script>
+    <script src="node_modules/foundation-sites/dist/js/foundation.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>

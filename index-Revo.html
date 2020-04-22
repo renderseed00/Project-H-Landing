@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project H - by Renderseed Labs and Motion Studios</title>
+    <meta name="description" content="DEMO" />
+    <meta name="keywords" content="DEMO" />
+    <meta name="author" content="Arnold Takundwa" />
+    <link rel="shortcut icon" href="favicon(4).ico">
+    <link rel="stylesheet" href="css/app.css">
+
+
+
+    <style>
+      
+
+      *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+      }
+      img{
+        max-width:100%;
+      }
+      h2{
+        font-size:2.5em;
+      }
+      .container{
+        width:90%;
+        margin:auto;
+      }
+      header{
+        color:#fff;
+        position:absolute;
+        display:flex;
+        flex-flow: row wrap;
+        width:100%;
+        top:0;
+        left:0;
+        z-index:9;
+      }
+      header .container{
+        display:flex;
+        flex-flow: row wrap;
+        align-items:center;
+        padding:15px 0;
+      }
+      .logo{
+        font-size:20px;
+        text-transform:uppercase;
+        font-weight:bold;
+      }
+      .logo a{
+        color:#fff;
+        text-decoration:none;
+      }
+      nav {
+          justify-content: flex-end;
+          display: flex;
+          flex: 2 auto;
+      }
+      nav ul{
+        list-style:none;
+        padding:0;
+        margin:0;
+        display:flex;
+        flex-direction: row;
+      }
+      nav ul li{
+        padding:0.5em;
+      }
+      nav ul li a{
+        color:#fff;
+        text-decoration:none;
+        display:inline-block;
+      }
+      section{
+        padding:150px 0;
+      }
+      .hero-banner{
+      background:url(https://images.unsplash.com/photo-1517946264308-1a7ea8abb6e0?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ&s=add9d7ca772d122fb699bb1790d89a93) no-repeat center center;
+        background-size: cover;
+        height:100vh;
+        display:flex;
+        align-items:center;
+        text-align:center;
+        position:relative;
+        z-index:0;
+      }
+      .hero-banner:after{
+        content:"";
+        display:block;
+        background:rgba(0,0,0,0.5);
+        left:0;
+        top:0;
+        height:100%;
+        width:100%;
+        position:absolute;
+      }
+      .hero-banner h2{
+        color:#fff;
+        position:relative;
+        z-index:1;
+      }
+      .about{
+        text-align:center;
+        line-height:2;
+      }
+      .portfolio{
+        text-align:center;
+        line-height:2;
+        background:#f1f1f1;
+      }
+      header.fixed {
+        background: #fff;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        opacity:0;
+        visibility:hidden;
+        box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.2);
+        transform:translate(0, -200px);
+      }
+      header.fixed nav a, header.fixed .logo a{
+        color:#333;
+      }
+      header.in-view{
+        opacity:1;
+        visibility:visible;
+        transition: all 0.3s ease;
+        transform:translate(0, 0);
+      }
+      @media only screen and (max-width: 640px) {
+        header.fixed{
+          position:relative;
+        }
+      }
+      header{
+        background: #000000;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 999px;
+        box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.5);
+      }
+
+
+    </style>
+<script type="text/javascript">
+  
+
+$(window).scroll(function() {
+  var header = $(document).scrollTop();
+  var headerHeight = $(".header").outerHeight();
+  var firstSection = $(".main-container section:nth-of-type(1)").outerHeight();
+  if (header > headerHeight) {
+    $(".header").addClass("fixed");
+  } else {
+    $(".header").removeClass("fixed");
+  }
+  if (header > firstSection) {
+    $(".header").addClass("in-view");
+  } else {
+    $(".header").removeClass("in-view");
+  }
+});
+
+
+</script>
+
+  </head>
+  <body>
+
+
+
+<header class="header">
+  <div class="container">
+    <div class="logo"><a href="#">Logo</a></div>
+    <nav>
+      <ul>
+        <li><a href="#section0">Home</a></li>
+        <li><a href="#section1">Concept</a></li>
+        <li><a href="#section2">Story</a></li>
+        <li><a href="#section3">Vehicles</a></li>
+        <li><a href="#section4">Characters</a></li>
+        <li><a href="#section5">About</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<div class="main-container">
+  <section class="hero-banner" id="section0" data-anchor="op-section second">
+    <div class="container">
+      <h2>Animated Header On Scroll</h2>
+    </div>
+  </section>
+  <section class="about" id="section1" data-anchor="op-section second">
+    <div class="container">
+      <h2>Concept</h2>
+      <p>"But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder
+        of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who
+        loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious
+        physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?" "At vero
+        eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia
+        animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda
+        est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis
+        voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat."</p>
+    </div>
+  </section>
+  <section class="portfolio" id="section2" data-anchor="op-section third">
+    <div class="container">
+      <h2>Story</h2>
+      <p>"But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder
+        of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who
+        loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious
+        physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?" "At vero
+        eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia
+        animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda
+        est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis
+        voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat."</p>
+    </div>
+  </section>
+  <section class="portfolio" id="section3" data-anchor="op-section fourth">
+    <div class="container">
+      <h2>Vehicles</h2>
+      <p>"But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder
+        of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who
+        loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious
+        physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?" "At vero
+        eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia
+        animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda
+        est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis
+        voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat."</p>
+    </div>
+  </section>
+  <section class="portfolio" id="section4" data-anchor="op-section fifth">
+    <div class="container">
+      <h2>Characters</h2>
+      <p>"But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder
+        of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who
+        loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious
+        physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?" "At vero
+        eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia
+        animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda
+        est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis
+        voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat."</p>
+    </div>
+  </section>
+  <section class="portfolio" id="section5" data-anchor="op-section last">
+    <div class="container">
+      <h2>About</h2>
+      <p>"But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder
+        of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who
+        loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious
+        physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?" "At vero
+        eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia
+        animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda
+        est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis
+        voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat."</p>
+    </div>
+  </section>
+</div>
+
+
+
+
+
+
+    <script src="js/jquery.min.js"></script>
+    <script src="node_modules/what-input/dist/what-input.js"></script>
+    <script src="node_modules/foundation-sites/dist/js/foundation.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
